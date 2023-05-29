@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+        a{padding: 10px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Barra de nevegação</h1>
+        <a href="../index.html">Home</a>
+        <a href="desafio-AnoBissexto.html">desafio-AnoBissexto</a>
+        <a href="desafio-Antes-e-Depois.html">desafio-Ates-e-Depois</a>
+        <a href="desafio-Bhaskara.html">desafio-Bhaskara</a>
+        <a href="desafio-Boas-Vindas.html">desafio-Boas-Vindas</a>
+        <a href="desafio-Conversor-de-Medidas.html">desafio-Conversor-de-Medidas</a>
+        <a href="desafio-Conversor-de-Moedas.html">desafio-Conversor-de-Moedas</a>
+        <a href="desafio-Conversor-de-Temperaturas.html">desafio-Conversor-de-Temperaturas</a>
+        <a href="desafio-Desconto-de-10%.html">desafio-Desconto-de-10%</a>
+        <a href="desafio-Mensagens.html">desafio-Mensagens</a>
+        <a href="desafio-Preco-Mudou.html">desafio-Preco-Mudou</a>
+        <a href="desafio-reajusteSalarial.html">desafio-reajusteSalarial</a>
+        <a href="desafio-Situacao-Aluno.html">desafio-Situacao-Aluno</a>
+        <a href="desafio-troco.html">desafio-troco</a>  
+    </header>
+    
+    <section>
+        <h1>Antes e Depois</h1>
+        <button onclick="Antecessor_e_Sucessor()">Antecessor e Sucessor</button>
+    </section>
+    
+    <script>
+        function Antecessor_e_Sucessor()
+        {
+            let numero = Number(window.prompt("Digite um número inteiro qualquer"))
+            let antecessor = numero-1
+            let sucessor = numero+1
+            window.alert(`Antes de ${numero}, temos ${antecessor}\nDepois de ${numero}, temos ${sucessor}`)
+        }
+    </script>
+</body>
+</html>

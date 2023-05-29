@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+    <style>
+        body{font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+        .marcador{ background-color: rgb(253, 253, 87);}
+        a{padding: 10px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Barra de nevegação</h1>
+        <a href="../index.html">Home</a>
+        <a href="desafio-AnoBissexto.html">desafio-AnoBissexto</a>
+        <a href="desafio-Antes-e-Depois.html">desafio-Ates-e-Depois</a>
+        <a href="desafio-Bhaskara.html">desafio-Bhaskara</a>
+        <a href="desafio-Boas-Vindas.html">desafio-Boas-Vindas</a>
+        <a href="desafio-Conversor-de-Medidas.html">desafio-Conversor-de-Medidas</a>
+        <a href="desafio-Conversor-de-Moedas.html">desafio-Conversor-de-Moedas</a>
+        <a href="desafio-Conversor-de-Temperaturas.html">desafio-Conversor-de-Temperaturas</a>
+        <a href="desafio-Desconto-de-10%.html">desafio-Desconto-de-10%</a>
+        <a href="desafio-Mensagens.html">desafio-Mensagens</a>
+        <a href="desafio-Preco-Mudou.html">desafio-Preco-Mudou</a>
+        <a href="desafio-reajusteSalarial.html">desafio-reajusteSalarial</a>
+        <a href="desafio-Situacao-Aluno.html">desafio-Situacao-Aluno</a>
+        <a href="desafio-troco.html">desafio-troco</a>  
+    </header>
+    
+    <section>
+        <h1>Resolvendo Bhaskara</h1>
+        <button onclick="calcular()">Calcular</button>
+        <section id="mensagem">
+            <p>Considerando uma equação no formato <b>ax² + bx + c</b> = 0, aparte o botão acima para calcular o valor de Δ</p> 
+        </section>
+    </section>
+    
+    <script>
+        function calcular()
+        {
+            let a = Number(window.prompt("Qual é o valor de a?"))
+            let b = Number(window.prompt("Qual é o valor de b?"))
+            let c = Number(window.prompt("Qual é o valor de c?"))
+
+            let men = window.document.getElementById("mensagem")
+            let delta = (b*b)-(4*a*c)
+
+            men.innerHTML = `<br> A equação atual é <b>${a}x² + ${b}x + ${c}</b> = 0`
+            men.innerHTML += `<br> O cálculo realizado será <b>Δ = ${b}² - 4 . ${a} . ${c}</b>`
+            men.innerHTML += `<br> O valor calculado foi <span class="marcador">Δ = ${delta}</span>`
+        }
+    </script>
+</body>
+</html>

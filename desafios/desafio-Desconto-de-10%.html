@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto de 10%</title>
+    <style>
+        body{font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+        a{padding: 10px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Barra de nevegação</h1>
+        <a href="../index.html">Home</a>
+        <a href="desafio-AnoBissexto.html">desafio-AnoBissexto</a>
+        <a href="desafio-Antes-e-Depois.html">desafio-Ates-e-Depois</a>
+        <a href="desafio-Bhaskara.html">desafio-Bhaskara</a>
+        <a href="desafio-Boas-Vindas.html">desafio-Boas-Vindas</a>
+        <a href="desafio-Conversor-de-Medidas.html">desafio-Conversor-de-Medidas</a>
+        <a href="desafio-Conversor-de-Moedas.html">desafio-Conversor-de-Moedas</a>
+        <a href="desafio-Conversor-de-Temperaturas.html">desafio-Conversor-de-Temperaturas</a>
+        <a href="desafio-Desconto-de-10%.html">desafio-Desconto-de-10%</a>
+        <a href="desafio-Mensagens.html">desafio-Mensagens</a>
+        <a href="desafio-Preco-Mudou.html">desafio-Preco-Mudou</a>
+        <a href="desafio-reajusteSalarial.html">desafio-reajusteSalarial</a>
+        <a href="desafio-Situacao-Aluno.html">desafio-Situacao-Aluno</a>
+        <a href="desafio-troco.html">desafio-troco</a>  
+    </header>
+
+    <section>
+        <h1>Calcular Desconto</h1>
+        <button onclick="desconto()">Desconto de 10%</button>
+        <section id="mensagem">
+            <p>Clique no botão acima para iniciar</p>
+        </section>
+    </section>
+
+    <script>
+        function desconto()
+        {
+            let produto = window.prompt("Qual o produto que você está comprando?")
+            let preco = window.prompt(`Qual é o preço do ${produto}?`)
+            let men = window.document.getElementById("mensagem")
+            let desconto10 = preco * 0.1
+            let precoDesconto = preco - desconto10
+            men.innerHTML = `<br><h2> Calculando desconto de 10% para ${produto}</h2><br>`
+            men.innerHTML += `<br> O preço original era R$ ${preco}<br>`
+            men.innerHTML += `<br> Você acaba de ganhar R$ ${desconto10.toFixed(2)} de desconto (-10%).<br>`
+            men.innerHTML += `<br> No fim, você vai pagar R$ ${precoDesconto.toFixed(2)} no produto ${produto}.<br>`
+        }
+    </script>
+</body>
+</html>

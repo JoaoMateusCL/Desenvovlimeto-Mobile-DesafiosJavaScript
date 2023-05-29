@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Mudou</title>
+    <style>
+        body{font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+        a{padding: 10px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Barra de nevegação</h1>
+        <a href="../index.html">Home</a>
+        <a href="desafio-AnoBissexto.html">desafio-AnoBissexto</a>
+        <a href="desafio-Antes-e-Depois.html">desafio-Ates-e-Depois</a>
+        <a href="desafio-Bhaskara.html">desafio-Bhaskara</a>
+        <a href="desafio-Boas-Vindas.html">desafio-Boas-Vindas</a>
+        <a href="desafio-Conversor-de-Medidas.html">desafio-Conversor-de-Medidas</a>
+        <a href="desafio-Conversor-de-Moedas.html">desafio-Conversor-de-Moedas</a>
+        <a href="desafio-Conversor-de-Temperaturas.html">desafio-Conversor-de-Temperaturas</a>
+        <a href="desafio-Desconto-de-10%.html">desafio-Desconto-de-10%</a>
+        <a href="desafio-Mensagens.html">desafio-Mensagens</a>
+        <a href="desafio-Preco-Mudou.html">desafio-Preco-Mudou</a>
+        <a href="desafio-reajusteSalarial.html">desafio-reajusteSalarial</a>
+        <a href="desafio-Situacao-Aluno.html">desafio-Situacao-Aluno</a>
+        <a href="desafio-troco.html">desafio-troco</a>  
+    </header>
+
+    <section>
+        <h1>Preço Mudou</h1>
+        <button onclick="preco()">Verificar</button>
+        <section id="mensagem">
+            <p>Clique no botão acima para analisar a mudança de preço.</p>
+        </section>
+    </section>
+
+    <script>
+        function preco()
+        {
+            let precoAntigo = Number(window.prompt("Qual era o preço anterior do produto?"))
+            let precoAtual = Number(window.prompt("Qual é o preço atual do produto?"))
+            let men = window.document.getElementById("mensagem")
+
+            men.innerHTML = "<br><h2> Analisando os valores informados.</h2>"
+            men.innerHTML += `<br> O produto custava R$ ${precoAntigo} e agora custa R$ ${precoAtual}.<br>`
+            
+            if(precoAtual > precoAntigo)
+            {
+                men.innerHTML += "<br> Hoje o produto está mais caro."
+                let alteracaoPreco = precoAtual - precoAntigo
+                men.innerHTML += `<br> O preço subiu R$ ${alteracaoPreco} em relação ao preço anterior<br>`
+                let porcentagem = (alteracaoPreco/precoAntigo)*100
+                men.innerHTML += `<br> Uma variação de ${porcentagem.toFixed(2)}% para cima<br>`
+            }
+            else if(precoAtual < precoAntigo)
+            {
+                men.innerHTML += "<br> Hoje o produto está mais barato."
+                let alteracaoPreco = precoAntigo - precoAtual
+                men.innerHTML += `<br> O preço caiu R$ ${alteracaoPreco} em relação ao preço anterior.<br>`
+                let porcentagem = (alteracaoPreco/precoAntigo)*100
+                men.innerHTML += `<br> Uma variação de ${porcentagem.toFixed(2)}% para baixo.<br>`
+            }
+            else if(precoAntigo == precoAtual)
+            {
+                men.innerHTML += "<br> Não houve alteração de preço.<br>"
+            }
+            else
+            {
+                men.innerHTML = "<h2>Valor inválido tente novamente<h2>"
+            }
+        }
+    </script>
+</body>
+</html>

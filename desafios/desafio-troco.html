@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o troco</title>
+    <style>
+        body{font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+        a{padding: 10px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Barra de nevegação</h1>
+        <a href="../index.html">Home</a>
+        <a href="desafio-AnoBissexto.html">desafio-AnoBissexto</a>
+        <a href="desafio-Antes-e-Depois.html">desafio-Ates-e-Depois</a>
+        <a href="desafio-Bhaskara.html">desafio-Bhaskara</a>
+        <a href="desafio-Boas-Vindas.html">desafio-Boas-Vindas</a>
+        <a href="desafio-Conversor-de-Medidas.html">desafio-Conversor-de-Medidas</a>
+        <a href="desafio-Conversor-de-Moedas.html">desafio-Conversor-de-Moedas</a>
+        <a href="desafio-Conversor-de-Temperaturas.html">desafio-Conversor-de-Temperaturas</a>
+        <a href="desafio-Desconto-de-10%.html">desafio-Desconto-de-10%</a>
+        <a href="desafio-Mensagens.html">desafio-Mensagens</a>
+        <a href="desafio-Preco-Mudou.html">desafio-Preco-Mudou</a>
+        <a href="desafio-reajusteSalarial.html">desafio-reajusteSalarial</a>
+        <a href="desafio-Situacao-Aluno.html">desafio-Situacao-Aluno</a>
+        <a href="desafio-troco.html">desafio-troco</a>  
+    </header>
+
+    <section>
+        <h1>Calculando o troco</h1>
+        <button onclick="calculaTroco()">Comprar produto</button>
+    </section>
+
+    <script>
+        function calculaTroco()
+        {
+            let nomeProduto = window.prompt("Que produto você está comprando?")
+            let precoProduto = Number(window.prompt(`Quanto custa o ${nomeProduto} que você está comprando ?`))
+            let pagamento = Number(window.prompt(`Qual foi o valor que você deu para pagar o ${nomeProduto}?`))
+            let troco = pagamento - precoProduto
+
+            if(precoProduto <= pagamento)
+            {
+                window.alert(`Comprou um ${nomeProduto} que custou ${precoProduto}.\n Deu R$ ${pagamento} em dinheiro e vai receber R$ ${troco} de troco \n Volte sempre!`)
+            }
+            else if(pagamento < precoProduto)
+            {
+                window.alert(`Dinheiro fornecido insuficiente para pagar o produto ${nomeProduto}`)
+            }
+            else
+            {
+                window.alert("Dados inválidos!!")
+            }
+        }
+    </script>
+</body>
+</html>

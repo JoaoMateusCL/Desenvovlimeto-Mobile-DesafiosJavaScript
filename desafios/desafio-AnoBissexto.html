@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        body{font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+        .errado{background-color: rgb(255, 73, 73);}
+        .certo{background-color: rgb(157, 246, 24);}
+        a{padding: 10px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Barra de nevegação</h1>
+        <a href="../index.html">Home</a>
+        <a href="desafio-AnoBissexto.html">desafio-AnoBissexto</a>
+        <a href="desafio-Antes-e-Depois.html">desafio-Ates-e-Depois</a>
+        <a href="desafio-Bhaskara.html">desafio-Bhaskara</a>
+        <a href="desafio-Boas-Vindas.html">desafio-Boas-Vindas</a>
+        <a href="desafio-Conversor-de-Medidas.html">desafio-Conversor-de-Medidas</a>
+        <a href="desafio-Conversor-de-Moedas.html">desafio-Conversor-de-Moedas</a>
+        <a href="desafio-Conversor-de-Temperaturas.html">desafio-Conversor-de-Temperaturas</a>
+        <a href="desafio-Desconto-de-10%.html">desafio-Desconto-de-10%</a>
+        <a href="desafio-Mensagens.html">desafio-Mensagens</a>
+        <a href="desafio-Preco-Mudou.html">desafio-Preco-Mudou</a>
+        <a href="desafio-reajusteSalarial.html">desafio-reajusteSalarial</a>
+        <a href="desafio-Situacao-Aluno.html">desafio-Situacao-Aluno</a>
+        <a href="desafio-troco.html">desafio-troco</a>  
+    </header>
+    
+    <section>
+        <h1>Ano Bissexto</h1>
+        <button onclick="verificar()">VERIFICAR</button>
+        <section id="mensagem">
+            <p>Informe um ano para saber se ele é bissexto</p>
+
+        </section>
+    </section>
+    
+    <script>
+        function verificar()
+        {
+            let ano = window.prompt("Qual ano você quer verificar?")
+            let res = window.document.getElementById("mensagem")
+            res.innerHTML = `<h1>Analisando o ano de ${ano}...<h1>`
+
+            if(ano%4==0)
+            {
+                res.innerHTML += `<p>O ano de ${ano} <span class="certo">É BISSEXTO </span>&#9989;</p>`
+            }
+            else
+            {
+                res.innerHTML += `<p>O ano de ${ano} <span class="errado">NÃO É BISSEXTO</span> &#10060;</p>`
+            }
+        }
+    </script>
+</body>
+</html>

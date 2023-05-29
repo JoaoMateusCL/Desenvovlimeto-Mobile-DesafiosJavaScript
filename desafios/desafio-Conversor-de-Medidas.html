@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        body{font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+        a{padding: 10px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Barra de nevegação</h1>
+        <a href="../index.html">Home</a>
+        <a href="desafio-AnoBissexto.html">desafio-AnoBissexto</a>
+        <a href="desafio-Antes-e-Depois.html">desafio-Ates-e-Depois</a>
+        <a href="desafio-Bhaskara.html">desafio-Bhaskara</a>
+        <a href="desafio-Boas-Vindas.html">desafio-Boas-Vindas</a>
+        <a href="desafio-Conversor-de-Medidas.html">desafio-Conversor-de-Medidas</a>
+        <a href="desafio-Conversor-de-Moedas.html">desafio-Conversor-de-Moedas</a>
+        <a href="desafio-Conversor-de-Temperaturas.html">desafio-Conversor-de-Temperaturas</a>
+        <a href="desafio-Desconto-de-10%.html">desafio-Desconto-de-10%</a>
+        <a href="desafio-Mensagens.html">desafio-Mensagens</a>
+        <a href="desafio-Preco-Mudou.html">desafio-Preco-Mudou</a>
+        <a href="desafio-reajusteSalarial.html">desafio-reajusteSalarial</a>
+        <a href="desafio-Situacao-Aluno.html">desafio-Situacao-Aluno</a>
+        <a href="desafio-troco.html">desafio-troco</a>  
+    </header>
+
+    <section>
+        <h1>Conversor de Medidas</h1>
+        
+        <section id="mensagem">
+            <button onclick="converter()">Converter</button>
+            <p>Clique no botão acima para iniciar.</p>
+        </section>
+    </section>
+
+    <script>
+        function converter()
+        {
+            let medida = Number(window.prompt("Digite uma distância em metros (m)"))
+            let men = window.document.getElementById("mensagem")
+            men.innerHTML = `<br><h2> A distância de ${medida} metros, corresponde a...</2>`
+            
+            men.innerHTML += `<br>${medida/1000} quilômetros (Km)`
+            men.innerHTML += `<br>${medida/100} Hectômetros (Hm)`
+            men.innerHTML += `<br>${medida/10} decâmetros (Dam)`
+            men.innerHTML += `<br>${medida*10} decímetros (dm)`
+            men.innerHTML += `<br>${medida*100} centímetros (cm)`
+            men.innerHTML += `<br>${medida*1000} milímetros (mm)`
+        }
+    </script>
+</body>
+</html>
